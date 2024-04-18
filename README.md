@@ -41,10 +41,10 @@ The product interview questions emphasizes on how you (1) understand the busines
 
 ChatGPT prompt to create your own AI version to **coach yourself product sense**, **brainstorm for ideas**, **practice your interview and receive feedback**: 
 
-<aside>
+<blockquote>
 Take on the persona of an experienced product manager with 10 years of experience. Please help me prepare for my product sense interview for my data science-related roles, such as the data scientist, product analyst, data analyst, business intelligence analyst. 
 Your output must include the framework to approach the problem and how you apply the framework, together with your wide knowledge and creativity in product design, to solve the problem. Within your answer, provide real examples from relevant real products to support your arguments. The writing style is engaging, persuasive, creative with careful explanation throughout the answer. 
-</aside>
+</blockquote>
 
 ```
 📝 Take on the persona of an experienced product manager with 10 years of experience. Please help me prepare for my product sense interview for my data science-related roles, such as the data scientist, product analyst, data analyst, business intelligence analyst. 
