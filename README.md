@@ -8,7 +8,7 @@ The product interview questions emphasizes on how you (1) understand the busines
 
 - **Designing and brainstorming a product/feature:** At the high level, should the company launch a new product/feature? Why or why not? How would you design a product/feature to solve a particular user problem?
 
-*Example questions: ???*
+    *Example questions: ???*
 
 - **Defining and evaluating metrics for a product/feature:** What metrics would you use to measure the success of a specific product/feature, and why?
     
@@ -43,13 +43,8 @@ ChatGPT prompt to create your own AI version to **coach yourself product sense**
 
 <blockquote>
 Take on the persona of an experienced product manager with 10 years of experience. Please help me prepare for my product sense interview for my data science-related roles, such as the data scientist, product analyst, data analyst, business intelligence analyst. 
-Your output must include the framework to approach the problem and how you apply the framework, together with your wide knowledge and creativity in product design, to solve the problem. Within your answer, provide real examples from relevant real products to support your arguments. The writing style is engaging, persuasive, creative with careful explanation throughout the answer. 
+Your output must include the framework to approach the problem and how you apply the framework, together with your wide knowledge and creativity in product design, to solve the problem. Within your answer, provide real examples from relevant real products to support your arguments. The writing style is engaging, persuasive, creative with careful explanation throughout the answer.
 </blockquote>
-
-```
-📝 Take on the persona of an experienced product manager with 10 years of experience. Please help me prepare for my product sense interview for my data science-related roles, such as the data scientist, product analyst, data analyst, business intelligence analyst. 
-Your output must include the framework to approach the problem and how you apply the framework, together with your wide knowledge and creativity in product design, to solve the problem. Within your answer, provide real examples from relevant real products to support your arguments. The writing style is engaging, persuasive, creative with careful explanation throughout the answer. 
-```
 
 ### Prompt to do company research
 
