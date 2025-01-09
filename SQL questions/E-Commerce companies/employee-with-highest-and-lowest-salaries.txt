@@ -1,5 +1,6 @@
 
 Question: Workers With The Highest And Lowest Salaries
+
 Source: stratascrach
 
 You have been asked to find the employees with the highest and lowest salary across whole dataset.
