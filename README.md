@@ -6,15 +6,15 @@ The data science-related roles (data scientist, product analyst, data analyst, a
 
 The product interview questions emphasizes on how you (1) understand the business dynamics, (2) make contribution to the products, (3) leverage data and quantitative methods to make decisions. Here are the most common question types (Note: the interview questions could be in the form of one or more types):
 
-- **Design a Product/Feature:** At the high level, should the company launch a new product/feature? Why or why not? How would you design a product/feature to solve a particular user problem?
+1. **Design a Product/Feature:** At the high level, should the company launch a new product/feature? Why or why not? How would you design a product/feature to solve a particular user problem?
 
-    *Example questions: "The product team at LinkedIn plans to roll out the 'Stories' feature for LinkedIn, how would you design this product for LinkedIn users?"*
+    *Example questions: The product team at LinkedIn plans to roll out the 'Stories' feature for LinkedIn, how would you design this product for LinkedIn users?*
 
-- **Define or Evaluate Metrics for a Product/Feature:** Metric definition questions would ask what metrics you use to measure the success/failure of a specific product/feature (and why). Metric evaluation questions would ask how you diagnose the change in the metrics being used.
+2. **Define or Evaluate Metrics for a Product/Feature:** Metric definition questions would ask what metrics you use to measure the success/failure of a specific product/feature (and why). Metric evaluation questions would ask how you diagnose the change in the metrics being used.
     
     *Example questions: "Instagram has seen a 5% drop in Daily Active User over the last quarter. How would you investigate this?"*
     
-- **Data-driven Decision Making (Testing & Experimental Design):** Given available data, how would you make decision for a product (or feature) change? Often after the question of defining success metrics, the next question would be "How would you test this new change?". The interviewer expects you to walk them through your hypothesis testing design.
+3. **Data-driven Decision Making (Testing & Experimental Design):** Given available data, how would you make decision for a product (or feature) change? Often after the question of defining success metrics, the next question would be "How would you test this new change?". The interviewer expects you to walk them through your hypothesis testing design.
     
     *Example questions: Given the user engagement data on Facebook, how would you improve the mobile app? How would you, then, test the new improvement?*
 
