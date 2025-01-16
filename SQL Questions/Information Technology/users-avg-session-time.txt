@@ -1,0 +1,31 @@
+Question: Users By Average Session Time 
+Source: stratascrach
+Companies: Meta
+
+Calculate each user's average session time, where a session is defined as the time difference between 
+a page_load and a page_exit. Assume each user has only one session per day. If there are multiple page_load 
+or page_exit events on the same day, use only the latest page_load and the earliest page_exit, ensuring the 
+page_load occurs before the page_exit. Output the user_id and their average session time.
+
+worker table:
+action:        text
+timestamp:     timestamp without time zone
+user_id:       bigint
+
+
+--- SOLUTION ---
+with user_sessions as (
+    select t1.user_id, 
+           t1.timestamp::date as date, 
+           min(t2.timestamp::TIMESTAMP) - max(t1.timestamp::TIMESTAMP) as session_length
+    from facebook_web_log t1 
+    join 
+    facebook_web_log t2 on t1.user_id = t2.user_id
+    where t1.action = 'page_load' and t2.action = 'page_exit'
+    and t2.timestamp > t1.timestamp
+    group by t1.user_id, date
+)
+select user_id, avg(session_length) from user_sessions 
+group by user_id
+
+--- WALKTHROUGH ---
