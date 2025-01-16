@@ -1,0 +1,25 @@
+Question: Friend Request Acceptance Rate By Date 
+Source: stratascrach
+Companies: Meta
+
+Calculate the friend acceptance rate for each date when friend requests were sent. 
+A request is sent if action = sent and accepted if action = accepted. 
+If a request is not accepted, there is no record of it being accepted in the table. 
+The output will only include dates where requests were sent and at least one of 
+them was accepted, as the acceptance rate can only be calculated for those dates. 
+Show the results ordered from the earliest to the latest date.
+
+fb_friend_requests table:
+action:                 text
+date:                   date
+user_id_receiver:       text
+user_id_sender:         text
+
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

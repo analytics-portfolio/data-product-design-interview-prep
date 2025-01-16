@@ -1,0 +1,27 @@
+Question: Workers With Highest Salaries 
+Source: stratascrach
+Companies: Amazon, DoorDash
+
+Find the job titles of the employees with the highest salary. 
+If multiple employees have the same highest salary, include the job titles for all such employees.
+
+worker table:
+department      : text
+first_name      : text
+joining_date    : date
+last_name       : text
+salary          : bigint
+worker_id       : bigint
+
+title table: 
+affected_from   : date
+worker_ref_id   : bigint
+worker_title    : text
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

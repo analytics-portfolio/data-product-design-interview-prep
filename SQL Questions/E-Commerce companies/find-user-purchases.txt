@@ -1,0 +1,23 @@
+Question: Finding User Purchases 
+Source: stratascrach
+Companies: Amazon
+
+Identify returning active users by finding users who made 
+a second purchase within 7 days of any previous purchase. 
+Output a list of these user_ids.
+
+
+amazon_transactions table:
+created_at:     date
+id:             bigint
+item:           text
+revenue:        bigint
+user_id:        bigint
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+
