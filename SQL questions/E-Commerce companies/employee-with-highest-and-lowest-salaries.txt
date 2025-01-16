@@ -3,6 +3,8 @@ Question: Workers With The Highest And Lowest Salaries
 
 Source: stratascrach
 
+Companies: Amazon, Siemens
+
 You have been asked to find the employees with the highest and lowest salary across whole dataset.
 
 Your output should include the employee's ID, salary, and employee's department, as well as a column salary_type that categorizes the output by:
