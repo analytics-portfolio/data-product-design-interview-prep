@@ -1,57 +1,25 @@
-## Why Data Science roles need Product Sense…
+# My Unconventional Strategy for Acing The Data Science Interview
 
-The data science-related roles (data scientist, product analyst, data analyst, and business intelligence analyst) often works cross-functionally with product managers (PM) and business stakeholders to develop a product roadmap and make decisions for business problems. 
+With the current job markets getting more competitive than ever, and meeting the job requirements alone is considered the minimum qualification, how do one stand out and successfully secure a data science job?
 
-## **Most Common Types of Product Interview Questions**
+Essentially, I think of an interview as a sales process - the company is the buyer with their expectations, and you are the seller of your values. 
 
-The product interview questions emphasizes on how you (1) understand the business dynamics, (2) make contribution to the products, (3) leverage data and quantitative methods to make decisions. Here are the most common question types (Note: the interview questions could be in the form of one or more types):
+Often times, a sale is closed when the buy side (the company) is so convinced that they are getting a bargain for the price they pay, and the value it gains from having you far exceeds the cost they pay to have you. 
 
-1. **Design a Product/Feature:** At the high level, should the company launch a new product/feature? Why or why not? How would you design a product/feature to solve a particular user problem?
+In the case of hiring a new candidate, the company wants to hire the most valuable person, and you should demonstrate that you can offer such great value that the company cannot ignore you. 
 
-    *Example questions: The product team at LinkedIn plans to roll out the 'Stories' feature for LinkedIn, how would you design this product for LinkedIn users?*
+This also means that in the sale process (i.e., the interview), there should be a transfer of conviction from you to the interviewer. Conviction comes from both your confidence (emotional factors) and your qualifications/track records (rational factors). 
 
-2. **Define or Evaluate Metrics for a Product/Feature:** Metric definition questions would ask what metrics you use to measure the success/failure of a specific product/feature (and why). Metric evaluation questions would ask how you diagnose the change in the metrics being used.
-    
-    *Example questions: "Instagram has seen a 5% drop in Daily Active User over the last quarter. How would you investigate this?"*
-    
-3. **Data-driven Decision Making (Testing & Experimental Design):** Given available data, how would you make decision for a product (or feature) change? Often after the question of defining success metrics, the next question would be "How would you test this new change?". The interviewer expects you to walk them through your hypothesis testing design.
-    
-    *Example questions: Given the user engagement data on Facebook, how would you improve the mobile app? How would you, then, test the new improvement?*
+When you think about it, qualifications is your list of accomplishments, and confidence is the feeling you accumulate over time as you consistently show up and deliver. 
 
-## General Structure of this repo
-* [The General Instruction to This Guide](./README.md)
-* [The Interview Questions (with My Answers)](./interview_questions.md)
-* [The Frameworks & Strategies I Used](./frameworks_strategies.md)
-* [AI Tools & Prompts I Used for Interview Prep](./ai_tools_prompts.md)
+On the individual level, if your value is 10x more valuable than the next person in line, you have such a leading edge among your competitors and even better, you could earn yourself a negotiation leverage. 
+
+This guide is aimed to help you become the 10x version of yourself. 
+
+Here is my strategic approach in preparing a competitive profile to put yourself ahead of the game. 
+
+Confidence comes from your own conviction - you are so convinced of yourself through the incredible things you did along the way. Build your stack of achievements.  
+    - successfully Move (really) fast, failed three times and on to the fourth one when others are still thinking about their first move. 
+    - Grind through the hard work even when you don't feel like it. Hold yourself accountable. 
 
 
-## AI Prompt Guide for Interview Prep
-
-### Prompt to create an AI Product Manager
-
-- ChatGPT prompt to create your own AI version to **coach yourself product sense**, **brainstorm for ideas**, **practice your interview and receive feedback**: 
-
-<blockquote>
-Take on the persona of an experienced product manager with 10 years of experience. Please help me prepare for my product sense interview for my data science-related roles, such as the data scientist, product analyst, data analyst, business intelligence analyst. 
-Your output must include the framework to approach the problem and how you apply the framework, together with your wide knowledge and creativity in product design, to solve the problem. Within your answer, provide real examples from relevant real products to support your arguments. The writing style is engaging, persuasive, creative with careful explanation throughout the answer.
-</blockquote>
-
-### Prompt to do company research
-
-The goal of using this prompt is to quickly research about the company: their business model, how they monitize their customers, what are their main products, who are their customers of those products, and so on. 
-
-<blockquote>
-Please conduct an extensive research about the business and operations of __COMPANY__. For each of the questions below, answer with at least 5 sentences. Answer for me the following quetions: 
-
-- What are the company's mission, vision, and core values? 
-
-- What products or services does the company offer, and how do they differentiate themselves in the market? 
-
-- Who are the current biggest competitor in their business landscape? 
- 
-Particularly in Data Science and Analytics team: 
-
-- What are the biggest challenges the team is facing in operation?
-
-- What technology stack and data infrastructure does the company use, and what tools are relevant to the Data Scientist/Data Analyst role?
-</blockquote>
