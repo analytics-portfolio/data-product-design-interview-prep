@@ -14,18 +14,27 @@ user_id:       bigint
 
 
 --- SOLUTION ---
-with user_sessions as (
-    select t1.user_id, 
-           t1.timestamp::date as date, 
-           min(t2.timestamp::TIMESTAMP) - max(t1.timestamp::TIMESTAMP) as session_length
+with user_session_len_by_date as (
+    select
+        t1.user_id, 
+        t1.timestamp::date as session_date,
+        min(t2.timestamp::TIMESTAMP) - max(t1.timestamp::TIMESTAMP) as session_len
     from facebook_web_log t1 
-    join 
-    facebook_web_log t2 on t1.user_id = t2.user_id
-    where t1.action = 'page_load' and t2.action = 'page_exit'
-    and t2.timestamp > t1.timestamp
-    group by t1.user_id, date
+        join facebook_web_log t2
+        on t1.user_id = t2.user_id
+        where t1.action = 'page_load' and t2.action = 'page_exit' 
+        and t2.timestamp > t1.timestamp
+    group by t1.user_id, session_date
 )
-select user_id, avg(session_length) from user_sessions 
+
+select
+    user_id, 
+    avg(session_len) as avg_session_len
+from user_session_len_by_date
 group by user_id
 
 --- WALKTHROUGH ---
+I would break down this problem into small manageable steps as the followings:
+- The final output has each user_id with their average session time across dates.
+- I start with computing the session length of each user on each day, then in the main query, 
+I compute the average session length of each unique user. 
