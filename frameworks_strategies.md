@@ -25,7 +25,7 @@ Confidence comes from your own conviction - you are so convinced of yourself thr
 (THE ABOVE SHOULD BE MY HOOK)
 
 ### During the Interview...
-Product Design interview is your chance to show off your skills in developing a solution for a product on a business level, and communicating your thought process to your peers. It is also intimidating because sometimes there isn't a single right answer, and the questions are different across industries. 
+Product Sense interview is your chance to show off your skills in developing a solution for a product on a business level, and communicating your thought process to your peers. It is also intimidating because sometimes there isn't a single right answer, and the questions are different across industries. 
 
 Therefore perspective matters: what interviewers want to see is whether you can think on your feet, communicate effectively, and 
 
