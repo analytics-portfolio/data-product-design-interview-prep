@@ -1,12 +1,20 @@
 # My Unconventional Strategy for Acing The Data Science Interview
 
-With the current job markets are getting more competitive than ever, and meeting the qualifications alone is considered the minimum, how do we stand out and successfully ace those interviews?
+With the current job markets getting more competitive than ever, and meeting the job requirements alone is considered the minimum qualification, how do one stand out and successfully secure a data science job?
 
-Essentially, an interview is a sales process - the company is the buyer, and you are the seller of your values. In real life, deals are most often made when the buy side is convinced that they are getting a bargain for the price they pay. In this case, the company wants to hire the most valuable person, and you should provide them with such great value they cannot ignore you. 
+Essentially, I think of an interview as a sales process - the company is the buyer with their expectations, and you are the seller of your values. 
 
-If your value is 10x more valuable than the next person in line, you have such a leading edge among your competitors and even better, you could earn yourself a negotiation leverage. 
+Often times, a sale is closed when the buy side (the company) is so convinced that they are getting a bargain for the price they pay, and the value it gains from having you far exceeds the cost they pay to have you. 
 
-So how do we become the 10x version of yourself?
+In the case of hiring a new candidate, the company wants to hire the most valuable person, and you should demonstrate that you can offer such great value that the company cannot ignore you. 
+
+This also means that in the sale process (i.e., the interview), there should be a transfer of conviction from you to the interviewer. Conviction comes from both your confidence (emotional factors) and your qualifications/track records (rational factors). 
+
+When you think about it, qualifications is your list of accomplishments, and confidence is the feeling you accumulate over time as you consistently show up and deliver. 
+
+On the individual level, if your value is 10x more valuable than the next person in line, you have such a leading edge among your competitors and even better, you could earn yourself a negotiation leverage. 
+
+This guide is aimed to help you become the 10x version of yourself. 
 
 Here is my strategic approach in preparing a competitive profile to put yourself ahead of the game. 
 
