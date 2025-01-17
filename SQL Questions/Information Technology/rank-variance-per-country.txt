@@ -1,0 +1,25 @@
+Question: Rank Variance Per Country
+Source: stratascrach
+Companies: Meta
+
+Which countries have risen in the rankings based on the number of comments between Dec 2019 vs Jan 2020? 
+Hint: Avoid gaps between ranks when ranking countries.
+
+fb_comments_count table:
+created_at          : date
+number_of_comments  : bigint
+user_id             : bigint
+
+fb_active_users table:
+country   : text
+name      : text
+status    : text
+user_id   : bigint
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

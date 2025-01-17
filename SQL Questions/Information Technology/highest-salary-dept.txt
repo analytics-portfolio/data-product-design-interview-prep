@@ -1,0 +1,30 @@
+Question: Highest Salary In Department
+Source: stratascrach
+Companies: X/Twitter, Asana
+
+Find the employee with the highest salary per department.
+Output the department name, employee's first name along with the corresponding salary.
+
+employee table:
+address          : text
+age              : bigint
+bonus            : bigint
+city             : text
+department       : text
+email            : text
+employee_title   : text
+first_name       : text
+id               : bigint
+last_name        : text
+manager_id       : bigint
+salary           : bigint
+sex              : text
+target           : bigint
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

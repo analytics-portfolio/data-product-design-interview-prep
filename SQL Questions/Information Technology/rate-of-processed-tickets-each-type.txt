@@ -1,0 +1,19 @@
+Question: Find the rate of processed tickets for each type
+Source: stratascrach
+Companies: Meta
+
+Find the rate of processed tickets for each type.
+
+facebook_complaints table:
+complaint_id:  bigint
+processed:     boolean
+type:          bigint
+
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

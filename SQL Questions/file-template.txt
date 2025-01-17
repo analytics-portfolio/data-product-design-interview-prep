@@ -5,6 +5,18 @@ Companies: FILL_HERE
 FILL_QUESTION_HERE
 
 FILL_TABLE_HERE
+worker table:
+department:         text
+first_name:         text
+joining_date:       datetime
+last_name:          text
+salary:             bigint
+worker_id:          bigint
+
+affected_from:      datetime
+worker_ref_id:      bigint
+worker_title:       text
+
 
 --- SOLUTION ---
 FILL_SOLUTION_HERE

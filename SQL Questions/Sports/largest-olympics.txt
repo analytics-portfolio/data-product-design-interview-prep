@@ -1,0 +1,32 @@
+Question: Largest Olympics
+Source: stratascrach
+Companies: ESPN
+
+Find the Olympics with the highest number of athletes. 
+The Olympics game is a combination of the year and the season, and is found in the 'games' column. 
+Output the Olympics along with the corresponding number of athletes.
+
+olympics_athletes_events table:
+age:     double precision
+city:    text
+event:   text
+games:   text
+height:  double precision
+id:      bigint
+medal:   text
+name:    text
+noc:     text
+season:  text
+sex:     text
+sport:   text
+team:    text
+weight:  double precision
+year:    bigint
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

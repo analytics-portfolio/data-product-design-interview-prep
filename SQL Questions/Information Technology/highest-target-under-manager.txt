@@ -1,0 +1,32 @@
+Question: Highest Target Under Manager
+Source: stratascrach
+Companies: Salesforce
+
+Identify the employee(s) working under manager manager_id=13 who have achieved the highest target.
+Return each such employee’s first name alongside the target value.
+The goal is to display the maximum target among all employees under manager_id=13 and show which employee(s) reached that top value.
+
+salesforce_employees table:
+address          : text
+age              : bigint
+bonus            : bigint
+city             : text
+department       : text
+email            : text
+employee_title   : text
+first_name       : text
+id               : bigint
+last_name        : text
+manager_id       : bigint
+salary           : bigint
+sex              : text
+target           : bigint
+
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

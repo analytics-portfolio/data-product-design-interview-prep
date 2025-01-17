@@ -1,0 +1,22 @@
+Question: Top Percentile Fraud
+Source: stratascrach
+Companies: Google, Netflix
+
+We want to identify the most suspicious claims in each state.
+We'll consider the top 5 percentile of claims with the highest fraud scores in each state as potentially fraudulent.
+Your output should include the policy number, state, claim cost, and fraud score.
+
+fraud_score table:
+claim_cost:   bigint
+fraud_score:  double precision
+policy_num:   text
+state:        text
+
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+

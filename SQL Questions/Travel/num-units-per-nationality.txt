@@ -1,0 +1,30 @@
+Question: Number Of Units Per Nationality 
+Source: stratascrach
+Companies: Airbnb
+
+We have data on rental properties and their owners.
+Write a query that figures out how many different apartments (use unit_id) are owned by people under 30, broken down by their nationality.
+We want to see which nationality owns the most apartments, so make sure to sort the results accordingly.
+
+airbnb_hosts table:
+age        : bigint
+gender     : text
+host_id    : bigint
+nationality: text
+
+airbnb_units table:
+city       : text
+country    : text
+host_id    : bigint
+n_bedrooms : bigint
+n_beds     : bigint
+unit_id    : text
+unit_type  : text
+
+--- SOLUTION ---
+
+
+
+--- WALKTHROUGH ---
+
+
