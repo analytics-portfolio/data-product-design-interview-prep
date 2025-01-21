@@ -16,12 +16,9 @@ On the individual level, if your value is 10x more valuable than the next person
 
 This guide is aimed to help you become the 10x version of yourself. 
 
-* [The SQL Interview Questions (with Answers and Walkthrough)](./SQL Questions.md)
 * [The SQL Interview Questions (with Answers and Walkthrough)](./SQL%20Questions)
-
-
-* [The Frameworks & Strategies I Used](./frameworks_strategies.md)
-* [AI Tools & Prompts I Used for Interview Prep](./ai_tools_prompts.md)
+* [The Product Sense Questions with the Frameworks & Strategies I Used](./Product%20Sense%20Questions)
+* [All Frameworks & Strategies I Used for my Behavioral Interview](./Behavioral%20Questions)
 
 
 
