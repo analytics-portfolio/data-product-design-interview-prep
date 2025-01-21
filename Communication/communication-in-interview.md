@@ -1,6 +1,6 @@
 
 
-A little context, I steal these strategies from the consulting interview handbook because I found out that the standard for a successful consulting interview is very high. 
+A little context, I steal these strategies from multiple consulting interview handbook - I found that the consulting interview's standard of a successful interview is very high. 
 
 Action steps:
 1. Effective understanding: simplify your thoughts, avoid jargon, clarify your emotions. 

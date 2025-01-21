@@ -21,7 +21,26 @@ downloads  : bigint
 user_id    : bigint
 
 --- SOLUTION ---
-
+WITH find_max_min_salary AS (
+    SELECT 
+        worker_id, 
+        salary, 
+        department, 
+        RANK() OVER(ORDER BY salary DESC) AS max_salary, 
+        RANK() OVER(ORDER BY salary ASC) AS min_salary
+    FROM 
+        worker
+)
+SELECT 
+        worker_id, 
+        salary, 
+        department, 
+        CASE 
+            WHEN max_salary = 1 THEN 'Highest Salary'
+            ELSE 'Lowest Salary'
+        END
+FROM find_max_min_salary
+WHERE  max_salary = 1 OR min_salary = 1
 
 
 --- WALKTHROUGH ---

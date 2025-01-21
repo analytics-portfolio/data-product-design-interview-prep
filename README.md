@@ -16,10 +16,12 @@ On the individual level, if your value is 10x more valuable than the next person
 
 This guide is aimed to help you become the 10x version of yourself. 
 
-Here is my strategic approach in preparing a competitive profile to put yourself ahead of the game. 
+* [The SQL Interview Questions (with Answers and Walkthrough)](./SQL Questions.md)
+* [The SQL Interview Questions (with Answers and Walkthrough)](./SQL%20Questions)
 
-Confidence comes from your own conviction - you are so convinced of yourself through the incredible things you did along the way. Build your stack of achievements.  
-    - successfully Move (really) fast, failed three times and on to the fourth one when others are still thinking about their first move. 
-    - Grind through the hard work even when you don't feel like it. Hold yourself accountable. 
+
+* [The Frameworks & Strategies I Used](./frameworks_strategies.md)
+* [AI Tools & Prompts I Used for Interview Prep](./ai_tools_prompts.md)
+
 
 
