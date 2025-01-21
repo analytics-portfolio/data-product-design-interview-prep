@@ -15,7 +15,22 @@ quantity:    bigint
 user_id:     bigint
 
 --- SOLUTION ---
-
+with first_purch_user_prod_id as (
+    select * 
+    from 
+    (select user_id, 
+          concat(user_id, '_', product_id) as user_prod_id, 
+          created_at, product_id,
+        rank() over (partition by user_id order by created_at) as rn
+    from marketing_campaign) a
+    where rn = 1
+), 
+cte as (select user_id, concat(user_id, '_', product_id) as user_prod_id
+    from marketing_campaign
+    where concat(user_id, '_', product_id) not in 
+    (select user_prod_id from first_purch_user_prod_id))
+    
+select count(distinct user_id) from cte
 
 
 --- WALKTHROUGH ---

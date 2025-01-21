@@ -15,7 +15,17 @@ purchase_amt bigint
 user_id      bigint
 
 --- SOLUTION ---
-
+SELECT t.month,
+       AVG(t.monthly_revenue) OVER(
+                                   ORDER BY t.month ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS avg_revenue
+FROM
+  (SELECT to_char(created_at::date, 'YYYY-MM') AS MONTH,
+          sum(purchase_amt) AS monthly_revenue
+   FROM amazon_purchases
+   WHERE purchase_amt>0
+   GROUP BY to_char(created_at::date, 'YYYY-MM')
+   ORDER BY to_char(created_at::date, 'YYYY-MM')) t
+ORDER BY t.month ASC
 
 
 --- WALKTHROUGH ---

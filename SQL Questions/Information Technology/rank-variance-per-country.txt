@@ -17,7 +17,11 @@ status    : text
 user_id   : bigint
 
 --- SOLUTION ---
-
+select * from 
+(select user_id from fb_comments_count) a
+join 
+(select user_id, country from fb_active_users) b
+on a.user_id = b.user_id
 
 
 --- WALKTHROUGH ---

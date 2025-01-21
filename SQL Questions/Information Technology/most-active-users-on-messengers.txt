@@ -15,7 +15,25 @@ user1      : text
 user2      : text
 
 --- SOLUTION ---
+WITH tb AS (SELECT 
+    usern,
+    SUM(msg_count) as total_msg,
+    DENSE_RANK() OVER (ORDER BY SUM(msg_count) DESC)
+FROM 
+    (SELECT 
+        user1 AS usern, 
+        msg_count
+    FROM fb_messages
+    UNION ALL
+    SELECT 
+        user2 AS usern, 
+        msg_count
+    FROM fb_messages) a
+GROUP BY usern)
 
+SELECT usern, total_msg FROM tb
+WHERE dense_rank <=10
+ORDER BY total_msg DESC
 
 
 --- WALKTHROUGH ---

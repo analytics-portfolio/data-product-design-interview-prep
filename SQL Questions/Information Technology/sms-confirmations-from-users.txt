@@ -26,7 +26,10 @@ date          : date
 phone_number  : bigint
 
 --- SOLUTION ---
-
+select (count(b.phone_number)::float/count(a.phone_number)) * 100 as perc
+from fb_sms_sends a left join 
+fb_confirmers b ON a.ds = b.date and a.phone_number = b.phone_number
+where a.ds = '08-04-2020' and a.type = 'message'
 
 
 --- WALKTHROUGH ---

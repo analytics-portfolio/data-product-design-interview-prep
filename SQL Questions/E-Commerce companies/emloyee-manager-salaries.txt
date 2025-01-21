@@ -22,7 +22,15 @@ sex             : text
 target          : bigint
 
 --- SOLUTION ---
-
+WITH cte_managers AS
+  (SELECT id,
+          salary
+   FROM employee)
+SELECT e.first_name AS first_name,
+       e.salary AS salary
+FROM employee e
+JOIN cte_managers m ON e.manager_id = m.id
+WHERE e.salary > m.salary;
 
 
 --- WALKTHROUGH ---

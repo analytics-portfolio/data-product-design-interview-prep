@@ -15,7 +15,21 @@ id:    bigint
 name:  text
 
 --- SOLUTION ---
-
+SELECT user_id,
+       name,
+       traveled_distance
+FROM
+  (SELECT lr.user_id,
+          lu.name,
+          SUM(lr.distance) AS traveled_distance,
+          rank () OVER (
+                        ORDER BY SUM(lr.distance) DESC) AS rank
+   FROM lyft_users AS lu
+   INNER JOIN lyft_rides_log AS lr ON lu.id = lr.user_id
+   GROUP BY lr.user_id,
+            lu.name
+   ORDER BY traveled_distance DESC) sq
+WHERE rank <= 10
 
 
 --- WALKTHROUGH ---

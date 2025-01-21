@@ -14,7 +14,19 @@ state:        text
 
 
 --- SOLUTION ---
-
+WITH percentiles AS
+  (SELECT state,
+          percentile_cont(0.05) within GROUP (
+                                              ORDER BY fraud_score DESC) AS percentile
+   FROM fraud_score
+   GROUP BY state)
+SELECT policy_num,
+       f.state,
+       claim_cost,
+       fraud_score
+FROM fraud_score f
+JOIN percentiles p ON f.state = p.state
+WHERE fraud_score >= percentile
 
 
 --- WALKTHROUGH ---

@@ -19,7 +19,15 @@ user_id        : text
 
 
 --- SOLUTION ---
-
+WITH max_cool_votes AS (
+    SELECT MAX(cool) AS max_cool
+    FROM yelp_reviews
+)
+SELECT y.business_name,
+       y.review_text
+FROM yelp_reviews y
+JOIN max_cool_votes mcv
+ON y.cool = mcv.max_cool;
 
 
 --- WALKTHROUGH ---

@@ -24,7 +24,15 @@ target           : bigint
 
 
 --- SOLUTION ---
-
+WITH cte_max_target AS
+  (SELECT MAX(target) AS max_target
+   FROM salesforce_employees
+   WHERE manager_id = 13)
+SELECT se.first_name,
+       se.target
+FROM salesforce_employees se
+JOIN cte_max_target c ON se.target = c.max_target
+WHERE se.manager_id = 13;
 
 
 --- WALKTHROUGH ---
