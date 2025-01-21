@@ -29,7 +29,26 @@ salary:     bigint
 
 
 --- SOLUTION ---
+with indiv_cost_per_project as (
+    select title, project_id, date_diff, 
+            budget, 
+            emp_id, 
+            salary as year_salary, 
+            (salary::numeric/365 * date_diff) as prorated_expenses 
+    from 
+        (select title, project_id, date_diff, budget, emp_id from 
+            (select *, (end_date-start_date)::decimal as date_diff from linkedin_projects) a
+                inner join linkedin_emp_projects b 
+                on a.id = b.project_id) c
+    inner join 
+    linkedin_employees d on c.emp_id = d.id
+)
 
+select title, budget, ceiling(sum(prorated_expenses)) as total_emp_cost
+from indiv_cost_per_project
+group by title, budget
+having budget < ceiling(sum(prorated_expenses)) 
+order by title
 
 
 --- WALKTHROUGH ---

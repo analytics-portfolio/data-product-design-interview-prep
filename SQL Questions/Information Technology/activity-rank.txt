@@ -17,7 +17,16 @@ id         : bigint
 to_user    : text
 
 --- SOLUTION ---
-
+with email_count as (
+    select from_user as user_name,
+    count(from_user) as email_sent
+    from google_gmail_emails
+    group by from_user
+    order by email_sent desc
+)
+select user_name, email_sent, 
+row_number() over(order by email_sent desc, user_name asc) as act_rank
+from email_count
 
 
 --- WALKTHROUGH ---

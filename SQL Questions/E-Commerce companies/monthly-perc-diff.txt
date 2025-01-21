@@ -3,7 +3,8 @@ Source: stratascrach
 Companies: Amazon
 
 Given a table of purchases by date, calculate the month-over-month percentage change in revenue.
-The output should include the year-month date (YYYY-MM) and percentage change, rounded to the 2nd decimal point, and sorted from the beginning of the year to the end of the year.
+The output should include the year-month date (YYYY-MM) and percentage change, rounded to the 2nd decimal point, 
+and sorted from the beginning of the year to the end of the year.
 The percentage change column will be populated from the 2nd month forward and can be calculated as ((this month's revenue - last month's revenue) / last month's revenue)*100.
 
 sf_transactions table:
@@ -13,8 +14,27 @@ purchase_id  bigint
 value        bigint
 
 --- SOLUTION ---
-
+WITH revenue_by_month AS (
+    SELECT 
+        TO_CHAR(created_at, 'YYYY-MM') AS year_month,
+        SUM(value) AS monthly_revenue
+    FROM sf_transactions
+    GROUP BY TO_CHAR(created_at, 'YYYY-MM')
+),
+prev_month_revenue AS (
+    SELECT 
+        year_month, 
+        monthly_revenue, 
+        LAG(monthly_revenue) OVER(ORDER BY year_month ASC) AS prev_month_revenue
+    FROM revenue_by_month
+)
+SELECT 
+    year_month, 
+    ROUND((monthly_revenue - prev_month_revenue)/prev_month_revenue * 100, 2) AS perc_monthly_change
+FROM prev_month_revenue
+ORDER BY year_month ASC
 
 --- WALKTHROUGH ---
-
+Simply calculate total revenue aggregated by month and find the previous monthly revenue
+by LAG() function, then compute the percentage monthly change in the main query. 
 

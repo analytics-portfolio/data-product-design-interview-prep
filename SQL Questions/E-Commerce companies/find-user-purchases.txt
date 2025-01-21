@@ -15,9 +15,20 @@ revenue:        bigint
 user_id:        bigint
 
 --- SOLUTION ---
-
-
+WITH user_last_purchase_date AS (
+    SELECT
+        user_id, 
+        created_at, 
+        LAG(created_at) OVER(PARTITION BY user_id ORDER BY created_at ASC) AS last_purchase_date
+    FROM 
+        amazon_transactions
+)
+SELECT DISTINCT user_id
+FROM user_last_purchase_date
+WHERE created_at - last_purchase_date <=7
+ORDER BY user_id ASC
 
 --- WALKTHROUGH ---
-
-
+Use CTE to find the last purchase date of each user_id using the LAG() function. 
+Then find user_id with the datetime difference between the considering date and its corresponding previous purchase date
+less than or equal to 7 days. 

@@ -42,7 +42,9 @@ SELECT
 FROM find_max_min_salary
 WHERE  max_salary = 1 OR min_salary = 1
 
-
 --- WALKTHROUGH ---
+The question asks for the employees with the highest and lowest salary. 
+I use a CTE first to RANK() employees by their salaries in two orders (DESC and ASC),
+and in the main SELECT query, I use WHERE condition to only select out employee with rank = 1 in DESC and ASC order. 
 
 

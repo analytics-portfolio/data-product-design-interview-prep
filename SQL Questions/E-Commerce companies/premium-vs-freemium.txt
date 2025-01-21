@@ -22,7 +22,22 @@ user_id    : bigint
 
 
 --- SOLUTION ---
+with cte as 
+    (select d.date, d.user_id, c.acc_id, c.paying_customer, d.downloads from 
+    (select a.user_id, b.acc_id, b.paying_customer 
+    from ms_user_dimension a join ms_acc_dimension b on a.acc_id = b.acc_id) c 
+    join ms_download_facts d on c.user_id = d.user_id)
 
+select a.date, a.non_paying_dwn, b.paying_dwn from 
+    (select date, sum(downloads) as non_paying_dwn from cte
+    where paying_customer = 'no'
+    group by date, paying_customer) a
+join 
+    (select date, sum(downloads) as paying_dwn from cte
+    where paying_customer = 'yes'
+    group by date, paying_customer) b
+on a.date = b.date
+where non_paying_dwn > paying_dwn
 
 
 --- WALKTHROUGH ---

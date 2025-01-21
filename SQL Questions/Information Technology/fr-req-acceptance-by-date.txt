@@ -17,9 +17,49 @@ user_id_sender:         text
 
 
 --- SOLUTION ---
+WITH sent_request_by_date AS (
+    SELECT
+        date, 
+        user_id_sender, 
+        user_id_receiver
+    FROM 
+        fb_friend_requests
+    WHERE
+        action = 'sent'
+),
 
+accpt_request_by_date AS (
+    SELECT
+        date, 
+        user_id_sender, 
+        user_id_receiver
+    FROM 
+        fb_friend_requests
+    WHERE
+        action = 'accepted'
+)
 
+SELECT
+    t1.date, 
+    (count(t2.user_id_receiver) * 1.0)/count(t1.user_id_sender) AS acceptance_rate
+FROM 
+    sent_request_by_date t1
+LEFT JOIN 
+    accpt_request_by_date t2
+ON t1.user_id_sender = t2.user_id_sender 
+    AND t1.user_id_receiver = t2.user_id_receiver
+GROUP BY t1.date
 
 --- WALKTHROUGH ---
+The key point in this question is how the acceptance rate by date is calculated:
+Given a date A, the acceptance rate of date A is the count of requests sent on date A of unique sender-receiver ID pairs divides 
+the count of requests accepted by those unique sender-receiver ID pairs (which might occur on later date).
 
+I use 2 CTEs, one is for sent requests by date and by the sender-receiver ID pairs and the other is for 
+accepted requests by date and by the sender-receiver ID pairs
 
+The main SELECT I left join the accepted requests table (t2) with the sent requests table (t1)
+since t1's date is the reference point for the acceptance rate by date in question. 
+Once I join 2 tables, I compute the acceptance rate by date by counting rows where the t2.user_id_receiver 
+is not null (which means these rows are friend requests sent that got accepted) and divides that with the 
+total count of requests sent, the count is group by date. 

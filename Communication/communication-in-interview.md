@@ -1,6 +1,6 @@
 
 
-A little context, I steal these strategies from multiple consulting interview handbook - I found that the consulting interview's standard of a successful interview is very high. 
+A little context, I steal these strategies from multiple consulting interview handbook - I found that the consulting interview's standard of a successful interview is very high, and the consulting interview requires a similar set of skills to a Data Science interview. 
 
 Action steps:
 1. Effective understanding: simplify your thoughts, avoid jargon, clarify your emotions. 

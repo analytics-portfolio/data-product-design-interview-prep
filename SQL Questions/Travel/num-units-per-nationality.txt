@@ -22,7 +22,16 @@ unit_id    : text
 unit_type  : text
 
 --- SOLUTION ---
+select count(t1.host_id), t2.nationality
+from 
+    (select host_id, unit_type, country from airbnb_units 
+    where unit_type = 'Apartment') t1
+inner join 
+    (select distinct host_id, nationality from airbnb_hosts
+    where age < 30) t2
+on t1.host_id = t2.host_id
 
+group by t1.host_id, t2.nationality
 
 
 --- WALKTHROUGH ---

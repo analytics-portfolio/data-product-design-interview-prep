@@ -20,8 +20,21 @@ worker_title    : text
 
 --- SOLUTION ---
 
+WITH salary_rank AS (
+    SELECT 
+        t2.worker_title, 
+        t1.worker_id, 
+        RANK() OVER(ORDER BY t1.salary DESC) AS sal_rank
+    FROM 
+        worker t1
+    LEFT JOIN title t2
+    ON t1.worker_id = t2.worker_ref_id
+)
 
+SELECT worker_title FROM salary_rank
+WHERE sal_rank = 1
 
 --- WALKTHROUGH ---
-
+Use CTE to find the salary ranking and find the worker title with 
+salary ranking equals 1
 
