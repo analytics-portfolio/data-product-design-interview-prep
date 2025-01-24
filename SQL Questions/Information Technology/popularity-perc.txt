@@ -1,0 +1,58 @@
+Question: Popularity Percentage
+Source: stratascrach
+Companies: Meta
+
+Find the popularity percentage for each user on Meta/Facebook.
+The dataset contains two columns, user1 and user2, which represent pairs of friends.
+Each row indicates a mutual friendship between user1 and user2, meaning both users are friends with each other.
+A user's popularity percentage is calculated as the total number of friends they have (counting connections from both user1 and user2 columns) divided by the total number of unique users on the platform.
+Multiply this value by 100 to express it as a percentage.
+
+Output each user along with their calculated popularity percentage.
+The results should be ordered by user ID in ascending order.
+
+facebook_friends table:
+user1:  bigint
+user2:  bigint
+
+
+--- SOLUTION ---
+WITH user_union AS (
+    SELECT 
+        user1, 
+        user2
+    FROM facebook_friends
+    UNION 
+    SELECT 
+        user2 AS user1,
+        user1 AS user2
+    FROM facebook_friends
+), 
+total_num_users AS (
+    SELECT COUNT(DISTINCT user1) as total_num
+    FROM user_union
+)
+
+SELECT 
+    user1, 
+    (COUNT(*)::float)/(SELECT total_num FROM total_num_users) * 100 AS pop_perc
+FROM user_union
+GROUP BY user1
+ORDER BY user1 ASC
+    
+
+--- WALKTHROUGH ---
+I use UNION operation to union the facebook_friends table with itself, but the second facebook_friends table
+has its columns swapped (user1 becomes user2 and vice versa). 
+If user A is friend with user B aka a row (A, B), doing the union with create another row as user B is friend with user A
+aka a row (B, A). This will ensure for every user, they will have all their friends on the column user2. 
+
+Once we have a full table, we can compute the popularity percentage by dividing the # of friends of a given user with
+the total number of distinct users. 
+
+
+One key feature of UNION operator is that it removes duplicated row. 
+For example, if the pair user1, user2 (1, 4) exists and during the UNION operation 
+another (1, 4) is expected to be added to the final table, only one row of (1, 4) existed 
+in the final table. 
+
